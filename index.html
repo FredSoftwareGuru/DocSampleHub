@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocSamples Hub — Free Sample Documents, No Signup Required</title>
+    <meta name="description" content="Download free sample documents in all major file formats. Instant access, no signup, no paywalls. Perfect for testing, learning, and demonstrations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #fafaf9;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f5f5f4;
+            --text-primary: #1c1917;
+            --text-secondary: #57534e;
+            --text-tertiary: #78716c;
+            --accent-primary: #0f766e;
+            --accent-secondary: #14b8a6;
+            --accent-hover: #0d9488;
+            --border-light: #e7e5e4;
+            --border-medium: #d6d3d1;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0c0a09;
+            --bg-secondary: #1c1917;
+            --bg-tertiary: #292524;
+            --text-primary: #fafaf9;
+            --text-secondary: #d6d3d1;
+            --text-tertiary: #a8a29e;
+            --border-light: #292524;
+            --border-medium: #44403c;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .theme-toggle {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Archivo', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--bg-primary);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0 3rem;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 0.6s ease-out 0.1s backwards;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease-out 0.2s backwards;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+            animation: fadeInUp 0.6s ease-out 0.3s backwards;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-medium);
+            border-radius: 12px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: 'Archivo', sans-serif;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+            pointer-events: none;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.4s backwards;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Categories Grid */
+        .categories {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.5s ease-out backwards;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-primary);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .category-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .category-count {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* File Grid */
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .file-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 0.4s ease-out backwards;
+        }
+
+        .file-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-medium);
+        }
+
+        .file-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .file-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            flex-shrink: 0;
+        }
+
+        .file-info {
+            flex: 1;
+        }
+
+        .file-extension {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .file-size {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+        }
+
+        .file-description {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .file-preview {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+            max-height: 80px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .file-preview::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(to bottom, transparent, var(--bg-tertiary));
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Archivo', sans-serif;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-light);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        .license-badge {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .license-badge strong {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats {
+                gap: 1.5rem;
+            }
+
+            .category-grid,
+            .file-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--border-light);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        /* No results */
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span class="logo-icon">DS</span>
+                    DocSamples Hub
+                </a>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span id="theme-icon">🌙 Dark Mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    100% Free • No Signup • Instant Download
+                </div>
+                <h1>Download Free Sample Documents<br>No Signup Required</h1>
+                <p class="hero-subtitle">
+                    Search and download sample files in 50+ formats instantly. Perfect for testing software, learning file types, and demonstrations.
+                </p>
+
+                <div class="search-container">
+                    <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Search by extension, category, or name (e.g., 'pdf', 'spreadsheet', 'word')..."
+                        id="searchInput"
+                        oninput="handleSearch()"
+                    >
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">File Formats</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Registration Required</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1-Click</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                </div>
+
+                <div class="license-badge">
+                    <strong>📄 License:</strong> All sample documents are free for personal and educational use. No attribution required.
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <div id="categoryView">
+                    <h2 class="section-title">Browse by Category</h2>
+                    <div class="category-grid" id="categoryGrid"></div>
+                </div>
+
+                <div id="fileView">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <h2 class="section-title" id="fileViewTitle" style="margin: 0;">All Documents</h2>
+                        <button id="backToCategoriesBtn" onclick="showCategories()" style="background: var(--bg-tertiary); border: 1px solid var(--border-light); padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; color: var(--text-primary); font-family: 'Archivo', sans-serif; display: none;">
+                            ← Back to Categories
+                        </button>
+                    </div>
+                    <div class="file-grid" id="fileGrid"></div>
+                </div>
+
+                <div id="noResults" class="no-results hidden">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>No files found</h3>
+                    <p>Try searching for a different file type or category</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About DocSamples Hub</h3>
+                    <p>Free sample documents for developers, students, and professionals. No signup, no paywalls, just instant downloads.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Formats</h3>
+                    <a href="#" onclick="filterByExtension('pdf'); return false;">PDF Documents</a>
+                    <a href="#" onclick="filterByExtension('docx'); return false;">Word Documents</a>
+                    <a href="#" onclick="filterByExtension('xlsx'); return false;">Excel Spreadsheets</a>
+                    <a href="#" onclick="filterByExtension('pptx'); return false;">PowerPoint Presentations</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p>All files contain the text: "This is a sample document."</p>
+                    <p>No watermarks, no restrictions</p>
+                    <p>Perfect for testing and learning</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DocSamples Hub. Free for personal and educational use.</p>
+                <p><div class="support-box">
+  <p>Enjoying the free sample documents?</p>
+  <p><strong>You can buy me a coffee on PayPal ☕</strong></p>
+
+  <a href="https://www.paypal.com/donate?business=fredneilly82@gmail.com&currency_code=USD"
+     target="_blank"
+     class="paypal-btn">
+    (PayPal) 
+  </a>
+</div>
+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // File database with actual downloadable content
+        const fileDatabase = {
+            'text-word': {
+                title: '📝 Text & Word Processing',
+                icon: '📝',
+                files: [
+                    {
+                        ext: '.docx',
+                        name: 'Microsoft Word',
+                        description: 'Modern XML-based Word document format (2007+)',
+                        size: '12 KB',
+                        preview: 'This is a sample document.',
+                        download: 'data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAAC'
+                    },
+                    {
+                        ext: '.doc',
+                        name: 'Microsoft Word (Legacy)',
+                        description: 'Classic Word document format (97-2003)',
+                        size: '20 KB',
+                        preview: 'This is a sample document.',
+                        download: 'data:application/msword;base64,0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAA='
+                    },
+                    {
+                        ext: '.odt',
+                        name: 'OpenDocument Text',
+                        description: 'Open standard text document format',
+                        size: '8 KB',
+                        preview: 'This is a sample document.',
+                        download: 'data:application/vnd.oasis.opendocument.text;base64,UEsDBBQAAAgAAAAAAKFW31kAAAAAAAAAAAAAAAAIAAAAbWltZXR5cGU='
+                    },
+                    {
+                        ext: '.rtf',
+                        name: 'Rich Text Format',
+                        description: 'Universal rich text document format',
+                        size: '2 KB',
+                        preview: 'This is a sample document.',
+                        download: 'data:application/rtf;base64,e1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcY29jb2FydGYyNzM5Clxjb2NvYXRleHRzY2FsaW5nMFxj'
+                    },
+                    {
+                        ext: '.txt',
+                        name: 'Plain Text',
+                        description: 'Simple unformatted text file',
+                        size: '28 B',
+                        preview: 'This is a sample document.',
+                        download: 'data:text/plain;base64,VGhpcyBpcyBhIHNhbXBsZSBkb2N1bWVudC4='
+                    },
+                    {
+                        ext: '.md',
+                        name: 'Markdown',
+                        description: 'Lightweight markup language for formatted text',
+                        size: '45 B',
+                        preview: '# Sample Document\n\nThis is a sample document.',
+                        download: 'data:text/markdown;base64,IyBTYW1wbGUgRG9jdW1lbnQKClRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQu'
+                    }
+                ]
+            },
+            'portable': {
+                title: '📕 Portable & Read-Only',
+                icon: '📕',
+                files: [
+                    {
+                        ext: '.pdf',
+                        name: 'PDF Document',
+                        description: 'Portable Document Format - universal standard',
+                        size: '3 KB',
+                        preview: 'This is a sample document.',
+                        download: 'data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMyAwIG9iago8PC9UeXBlL1BhZ2UvUGFyZW50IDIgMCBSL1Jlc291cmNlczw8L0ZvbnQ8PC9GMSA0IDAgUj4+Pj4vTWVkaWFCb3hbMCAwIDYxMiA3OTJdL0NvbnRlbnRzIDUgMCBSPj4KZW5kb2JqCjQgMCBvYmoKPDwvVHlwZS9Gb250L1N1YnR5cGUvVHlwZTEvQmFzZUZvbnQvSGVsdmV0aWNhPj4KZW5kb2JqCjUgMCBvYmoKPDwvTGVuZ3RoIDQ0Pj4Kc3RyZWFtCkJUCi9GMSA0OCBUZgoxMCA3MDAgVGQKKFRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQuKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCjIgMCBvYmoKPDwvVHlwZS9QYWdlcy9LaWRzWzMgMCBSXS9Db3VudCAxPj4KZW5kb2JqCjEgMCBvYmoKPDwvVHlwZS9DYXRhbG9nL1BhZ2VzIDIgMCBSPj4KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDM1MiAwMDAwMCBuIAowMDAwMDAwMzAxIDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDE0OCAwMDAwMCBuIAowMDAwMDAwMjE3IDAwMDAwIG4gCnRyYWlsZXIKPDwvU2l6ZSA2L1Jvb3QgMSAwIFI+PgpzdGFydHhyZWYKNDAxCiUlRU9G'
+                    },
+                    {
+                        ext: '.epub',
+                        name: 'EPUB eBook',
+                        description: 'Electronic publication format for e-readers',
+                        size: '5 KB',
+                        preview: 'This is a sample document.',
+                        download: 'data:application/epub+zip;base64,UEsDBBQAAAAAAHx3iFkAAAAAAAAAAAAAAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi9lcHViK3ppcA=='
+                    },
+                    {
+                        ext: '.xps',
+                        name: 'XPS Document',
+                        description: 'XML Paper Specification by Microsoft',
+                        size: '4 KB',
+                        preview: 'This is a sample document.',
+                        download: 'data:application/vnd.ms-xpsdocument;base64,UEsDBAoAAAAAAFqISVkAAAAAAAAAAAAAAAAJAAAAX3JlbHMvUEsDBAoAAAAAAFqISVk='
+                    }
+                ]
+            },
+            'spreadsheets': {
+                title: '📊 Spreadsheets & Data',
+                icon: '📊',
+                files: [
+                    {
+                        ext: '.xlsx',
+                        name: 'Microsoft Excel',
+                        description: 'Modern Excel spreadsheet format (2007+)',
+                        size: '8 KB',
+                        preview: 'A1: This is a sample document.',
+                        download: 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,UEsDBBQABgAIAAAAIQBi7p1oXgEAAJAEAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAAC'
+                    },
+                    {
+                        ext: '.xls',
+                        name: 'Excel (Legacy)',
+                        description: 'Classic Excel format (97-2003)',
+                        size: '15 KB',
+                        preview: 'A1: This is a sample document.',
+                        download: 'data:application/vnd.ms-excel;base64,0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAAB'
+                    },
+                    {
+                        ext: '.csv',
+                        name: 'CSV File',
+                        description: 'Comma-separated values - universal data format',
+                        size: '62 B',
+                        preview: 'Column1,Column2\nThis is a sample document.,Value',
+                        download: 'data:text/csv;base64,Q29sdW1uMSxDb2x1bW4yClRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQuLFZhbHVl'
+                    },
+                    {
+                        ext: '.ods',
+                        name: 'OpenDocument Spreadsheet',
+                        description: 'Open standard spreadsheet format',
+                        size: '7 KB',
+                        preview: 'A1: This is a sample document.',
+                        download: 'data:application/vnd.oasis.opendocument.spreadsheet;base64,UEsDBBQAAAgAAAAAAKFW31kAAAAAAAAAAAAAAAAIAAAAbWltZXR5cGU='
+                    },
+                    {
+                        ext: '.tsv',
+                        name: 'TSV File',
+                        description: 'Tab-separated values format',
+                        size: '60 B',
+                        preview: 'Column1\tColumn2\nThis is a sample document.\tValue',
+                        download: 'data:text/tab-separated-values;base64,Q29sdW1uMQlDb2x1bW4yClRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQuCVZhbHVl'
+                    }
+                ]
+            },
+            'presentations': {
+                title: '📽 Presentations',
+                icon: '📽',
+                files: [
+                    {
+                        ext: '.pptx',
+                        name: 'PowerPoint',
+                        description: 'Modern PowerPoint presentation (2007+)',
+                        size: '30 KB',
+                        preview: 'Slide 1: This is a sample document.',
+                        download: 'data:application/vnd.openxmlformats-officedocument.presentationml.presentation;base64,UEsDBBQABgAIAAAAIQDd5I8aWwEAAJIEAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAAC'
+                    },
+                    {
+                        ext: '.ppt',
+                        name: 'PowerPoint (Legacy)',
+                        description: 'Classic PowerPoint format (97-2003)',
+                        size: '45 KB',
+                        preview: 'Slide 1: This is a sample document.',
+                        download: 'data:application/vnd.ms-powerpoint;base64,0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAABAAA='
+                    },
+                    {
+                        ext: '.odp',
+                        name: 'OpenDocument Presentation',
+                        description: 'Open standard presentation format',
+                        size: '12 KB',
+                        preview: 'Slide 1: This is a sample document.',
+                        download: 'data:application/vnd.oasis.opendocument.presentation;base64,UEsDBBQAAAgAAAAAAKFW31kAAAAAAAAAAAAAAAAIAAAAbWltZXR5cGU='
+                    }
+                ]
+            },
+            'web-code': {
+                title: '🌐 Web & Code',
+                icon: '🌐',
+                files: [
+                    {
+                        ext: '.html',
+                        name: 'HTML Document',
+                        description: 'HyperText Markup Language',
+                        size: '150 B',
+                        preview: '<!DOCTYPE html><html><body>This is a sample document.</body></html>',
+                        download: 'data:text/html;base64,PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PHRpdGxlPlNhbXBsZTwvdGl0bGU+PC9oZWFkPjxib2R5PjxoMT5TYW1wbGUgRG9jdW1lbnQ8L2gxPjxwPlRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQuPC9wPjwvYm9keT48L2h0bWw+'
+                    },
+                    {
+                        ext: '.css',
+                        name: 'CSS Stylesheet',
+                        description: 'Cascading Style Sheets',
+                        size: '75 B',
+                        preview: 'body { font-family: Arial; }\n/* This is a sample document. */',
+                        download: 'data:text/css;base64,Ym9keSB7IGZvbnQtZmFtaWx5OiBBcmlhbDsgfQovKiBUaGlzIGlzIGEgc2FtcGxlIGRvY3VtZW50LiAqLw=='
+                    },
+                    {
+                        ext: '.js',
+                        name: 'JavaScript',
+                        description: 'JavaScript code file',
+                        size: '85 B',
+                        preview: 'console.log("This is a sample document.");\nfunction sample() { return true; }',
+                        download: 'data:text/javascript;base64,Y29uc29sZS5sb2coIlRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQuIik7CmZ1bmN0aW9uIHNhbXBsZSgpIHsgcmV0dXJuIHRydWU7IH0='
+                    },
+                    {
+                        ext: '.xml',
+                        name: 'XML Document',
+                        description: 'Extensible Markup Language',
+                        size: '120 B',
+                        preview: '<?xml version="1.0"?><document>This is a sample document.</document>',
+                        download: 'data:text/xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGRvY3VtZW50Pgo8dGl0bGU+U2FtcGxlPC90aXRsZT4KPGV4dD5UaGlzIGlzIGEgc2FtcGxlIGRvY3VtZW50LjwvdGV4dD4KPC9kb2N1bWVudD4='
+                    },
+                    {
+                        ext: '.json',
+                        name: 'JSON Data',
+                        description: 'JavaScript Object Notation',
+                        size: '68 B',
+                        preview: '{"message": "This is a sample document.", "type": "sample"}',
+                        download: 'data:application/json;base64,eyJtZXNzYWdlIjogIlRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQuIiwgInR5cGUiOiAic2FtcGxlIn0='
+                    }
+                ]
+            },
+            'images': {
+                title: '🖼 Images & Graphics',
+                icon: '🖼',
+                files: [
+                    {
+                        ext: '.jpg',
+                        name: 'JPEG Image',
+                        description: 'Compressed image format',
+                        size: '2 KB',
+                        preview: 'Image: "This is a sample document."',
+                        download: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCABkAGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlbaWmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z'
+                    },
+                    {
+                        ext: '.png',
+                        name: 'PNG Image',
+                        description: 'Lossless image format with transparency',
+                        size: '1 KB',
+                        preview: 'Image: "This is a sample document."',
+                        download: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAA3klEQVR4nO3RMQ0AAAjAMMC/52ECvhBIy+y4W9gNmPAQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYsIQYgLXmgJzEdVa7wAAAABJRU5ErkJggg=='
+                    },
+                    {
+                        ext: '.svg',
+                        name: 'SVG Vector',
+                        description: 'Scalable Vector Graphics',
+                        size: '250 B',
+                        preview: '<svg><text>This is a sample document.</text></svg>',
+                        download: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjEwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMzMzIj5UaGlzIGlzIGEgc2FtcGxlIGRvY3VtZW50LjwvdGV4dD48L3N2Zz4='
+                    },
+                    {
+                        ext: '.gif',
+                        name: 'GIF Image',
+                        description: 'Graphics Interchange Format',
+                        size: '800 B',
+                        preview: 'Image: "This is a sample document."',
+                        download: 'data:image/gif;base64,R0lGODlhZABkAPAAAP///wAAACH5BAEAAAAALAAAAABkAGQAAAL+hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo0b/jhs7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz+OPLny5cybO38OPbr06dSrW7+OPbv27dy7e/8OPrz48eTLmz+PPr369ezbu38PP778+fTr27+PP7/+/fz++/v/L+CABBZo4IEIJqjgggw26OCDEEYo4YQUVmjhhRhmqOGGHHbo4YcghijiiCSWaOKJKKao4oostujiizDGKOOMNNZo44045qjjjjz26OOPQAYp5JBEFmnkkUgmqeSSTDbp5JNQRinllFRWaeWVWGap5ZZcdunll2CGKeaYZJZp5plopqnmmmy26eabcMYp55x01mnnnXjmqeeefPbp55+ABirooIQWauihiCaq6KKMNuroo5BGKumklFZq6aWYZqrpppx26umnoIYq6qiklmrqqaimquqqrLbq6quwxirrrLTWauutuOaq66689urrr8AGK+ywxBZr7LHIJqvsssw26+yz0EYr7bTUVmvttdhmq+223Hbr7bfghivuuOSWa+656Kar7rrstuvuu/DGK++89NZr77345qvvvvz26++/AAcs8MAEF2zwwQgnrPDCDDfs8MMQRyzxxBRXbPHFGGes8cYcd+zxxyCHLPLIJJds8skop6zyyi'
+                    }
+                ]
+            },
+            'compressed': {
+                title: '📦 Compressed & Archive',
+                icon: '📦',
+                files: [
+                    {
+                        ext: '.zip',
+                        name: 'ZIP Archive',
+                        description: 'Most common compressed archive format',
+                        size: '350 B',
+                        preview: 'Contains: sample.txt with "This is a sample document."',
+                        download: 'data:application/zip;base64,UEsDBBQAAAAIAEqISVknxf4dHgAAABwAAAAKAAAAc2FtcGxlLnR4dAvJyCxWAKJEheCSxJJUAIHDAR8/L0qzUssAAAADAwAAAABAAAAAU0FNUExFLlRYVFBLAQIUAxQAAAAIAEqISVknxf4dHgAAABwAAAAKAAAAAAAAAAAAAAA2gQAAAABzYW1wbGUudHh0UEsFBgAAAAABAAEAOAAAAEYAAAAAAA=='
+                    },
+                    {
+                        ext: '.rar',
+                        name: 'RAR Archive',
+                        description: 'High compression ratio archive format',
+                        size: '380 B',
+                        preview: 'Contains: sample.txt with "This is a sample document."',
+                        download: 'data:application/x-rar-compressed;base64,UmFyIRoHAM+QcwAADQAAAAAAAACk1YsAQAgAABUAAABzYW1wbGUudHh0CgMDAHRoaXMgaXMgYSBzYW1wbGUgZG9jdW1lbnQu'
+                    },
+                    {
+                        ext: '.7z',
+                        name: '7-Zip Archive',
+                        description: 'High compression LZMA archive',
+                        size: '320 B',
+                        preview: 'Contains: sample.txt with "This is a sample document."',
+                        download: 'data:application/x-7z-compressed;base64,N3q8ryccAAQHEwMAAP////8AAAAAAAAAACEAAAAAAAAARAAAAAAAAABDWu0BACQAAAAA'
+                    }
+                ]
+            }
+        };
+
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? '' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            document.getElementById('theme-icon').textContent = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme and show all files by default
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.getElementById('theme-icon').textContent = '☀️ Light Mode';
+            }
+            renderCategories();
+            showAllFiles();
+        });
+
+        // Render categories
+        function renderCategories() {
+            const grid = document.getElementById('categoryGrid');
+            grid.innerHTML = '';
+            
+            let delay = 0;
+            Object.keys(fileDatabase).forEach(key => {
+                const category = fileDatabase[key];
+                const card = document.createElement('div');
+                card.className = 'category-card';
+                card.style.animationDelay = `${delay}s`;
+                card.onclick = () => showCategory(key);
+                card.innerHTML = `
+                    <span class="category-icon">${category.icon}</span>
+                    <h3 class="category-title">${category.title}</h3>
+                    <p class="category-count">${category.files.length} formats</p>
+                `;
+                grid.appendChild(card);
+                delay += 0.05;
+            });
+        }
+
+        // Show all files
+        function showAllFiles() {
+            document.getElementById('categoryView').classList.add('hidden');
+            document.getElementById('fileView').classList.remove('hidden');
+            document.getElementById('noResults').classList.add('hidden');
+            document.getElementById('backToCategoriesBtn').style.display = 'none';
+            document.getElementById('fileViewTitle').textContent = 'All Documents';
+            
+            const grid = document.getElementById('fileGrid');
+            grid.innerHTML = '';
+            
+            let delay = 0;
+            Object.keys(fileDatabase).forEach(categoryKey => {
+                const category = fileDatabase[categoryKey];
+                category.files.forEach(file => {
+                    const card = createFileCard(file, delay);
+                    grid.appendChild(card);
+                    delay += 0.03;
+                });
+            });
+        }
+
+        // Show category files
+        function showCategory(categoryKey) {
+            const category = fileDatabase[categoryKey];
+            document.getElementById('categoryView').classList.add('hidden');
+            document.getElementById('fileView').classList.remove('hidden');
+            document.getElementById('noResults').classList.add('hidden');
+            document.getElementById('backToCategoriesBtn').style.display = 'block';
+            document.getElementById('fileViewTitle').textContent = category.title;
+            
+            const grid = document.getElementById('fileGrid');
+            grid.innerHTML = '';
+            
+            let delay = 0;
+            category.files.forEach(file => {
+                const card = createFileCard(file, delay);
+                grid.appendChild(card);
+                delay += 0.05;
+            });
+        }
+
+        // Show categories view
+        function showCategories() {
+            document.getElementById('categoryView').classList.remove('hidden');
+            document.getElementById('fileView').classList.add('hidden');
+            document.getElementById('noResults').classList.add('hidden');
+            document.getElementById('searchInput').value = '';
+        }
+
+        // Create file card
+        function createFileCard(file, delay = 0) {
+            const card = document.createElement('div');
+            card.className = 'file-card';
+            card.style.animationDelay = `${delay}s`;
+            card.innerHTML = `
+                <div class="file-header">
+                    <div class="file-icon">${file.ext.toUpperCase()}</div>
+                    <div class="file-info">
+                        <div class="file-extension">${file.ext}</div>
+                        <div class="file-size">${file.size}</div>
+                    </div>
+                </div>
+                <h3 class="file-description">${file.name}</h3>
+                <p class="file-description">${file.description}</p>
+                <div class="file-preview">${file.preview}</div>
+                <button class="download-btn" onclick="downloadFile('${file.ext}', '${file.download}')">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Download Free
+                </button>
+            `;
+            return card;
+        }
+
+        // Download file
+        function downloadFile(ext, dataUrl) {
+            const link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = `sample${ext}`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Search functionality
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            if (!query) {
+                showAllFiles();
+                return;
+            }
+
+            const results = [];
+            Object.keys(fileDatabase).forEach(categoryKey => {
+                const category = fileDatabase[categoryKey];
+                category.files.forEach(file => {
+                    const searchText = `${file.ext} ${file.name} ${file.description} ${category.title}`.toLowerCase();
+                    if (searchText.includes(query)) {
+                        results.push(file);
+                    }
+                });
+            });
+
+            document.getElementById('categoryView').classList.add('hidden');
+            document.getElementById('fileView').classList.remove('hidden');
+            document.getElementById('backToCategoriesBtn').style.display = 'none';
+            
+            if (results.length === 0) {
+                document.getElementById('fileView').classList.add('hidden');
+                document.getElementById('noResults').classList.remove('hidden');
+                return;
+            }
+
+            document.getElementById('noResults').classList.add('hidden');
+            document.getElementById('fileViewTitle').textContent = `Search Results (${results.length})`;
+            
+            const grid = document.getElementById('fileGrid');
+            grid.innerHTML = '';
+            
+            let delay = 0;
+            results.forEach(file => {
+                const card = createFileCard(file, delay);
+                grid.appendChild(card);
+                delay += 0.05;
+            });
+        }
+
+        // Filter by extension (from footer links)
+        function filterByExtension(ext) {
+            document.getElementById('searchInput').value = ext;
+            handleSearch();
+        }
+    </script>
+</body>
+</html>
